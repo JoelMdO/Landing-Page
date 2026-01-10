@@ -1,9 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page</title>
+    <title>Viajar — Invierte en experiencias inolvidables</title>
+    <meta
+      name="description"
+      content="Viaja a destinos increíbles y acumula experiencias. Encuentra ofertas, guías y consejos para planear tu próximo viaje."
+    />
+    <meta
+      name="keywords"
+      content="viajar, viajes, experiencias, destinos, turismo, guías de viaje, ofertas de viaje, vacaciones, aventuras, cultura"
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="/" />
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Viajar — Invierte en experiencias inolvidables"
+    />
+    <meta
+      property="og:description"
+      content="Viaja a destinos increíbles y acumula experiencias. Encuentra ofertas, guías y consejos para planear tu próximo viaje."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/" />
+    <meta property="og:image" content="assets/hero.png" />
+    <meta property="og:locale" content="es_ES" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Viajar — Invierte en experiencias inolvidables"
+    />
+    <meta
+      name="twitter:description"
+      content="Viaja a destinos increíbles y acumula experiencias. Encuentra ofertas, guías y consejos para planear tu próximo viaje."
+    />
+    <meta name="twitter:image" content="assets/hero.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,19 +47,34 @@
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
-    <header>
-      <button class="login-button" type="button">Login</button>
+    <header role="banner">
+      <nav aria-label="Main navigation">
+        <button class="login-button" type="button" aria-label="Iniciar sesión">
+          Login
+        </button>
+      </nav>
     </header>
     <main class="main-content">
-      <h1>Viajar es la mejor forma de invertir.</h1>
+      <h1 id="site-title">Viajar es la mejor forma de invertir.</h1>
       <div class="image-container">
-        <img class="hero-image" src="assets/hero.png" alt="Hero Image" />
+        <img
+          class="hero-image"
+          src="assets/hero.png"
+          alt="Panorámica de un destino de viaje"
+        />
         <div class="image-right__text">
+          <h2>Descubre nuevos destinos, culturas y experiencias.</h2>
           <p>
-            Descubre nuevos destinos, culturas y experiencias que enriquecerán
-            tu vida y te brindarán recuerdos inolvidables.
+            Enriquece tu vida con recuerdos inolvidables y recomendaciones de
+            viaje.
           </p>
-          <button class="start-button" type="button">Iniciar</button>
+          <button
+            class="start-button"
+            type="button"
+            aria-label="Iniciar exploración"
+          >
+            Iniciar
+          </button>
         </div>
       </div>
     </main>
