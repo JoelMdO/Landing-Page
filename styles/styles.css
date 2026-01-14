@@ -1,18 +1,25 @@
+html,
 body {
-  font-family: "Lexend", "Open Sans", Arial, sans-serif;
+  height: 100%;
   margin: 0;
   padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lexend", "Open Sans", Arial, sans-serif;
   box-sizing: border-box;
   border: 0;
 }
 
 header {
   display: flex;
+  position: relative;
   justify-content: end;
   align-items: center;
   background-color: rgba(2, 87, 156, 0.5);
-  width: 100vw;
-  height: 5vh;
+  height: 5dvh;
 }
 
 .main-content {
@@ -20,8 +27,9 @@ header {
   position: relative;
   align-items: center;
   justify-items: center;
-  width: 100vw;
-  height: 95vh;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
   background-image: linear-gradient(
     25deg,
     rgba(189, 234, 40, 0.5) 45%,
@@ -53,8 +61,7 @@ h1 {
   font-size: clamp(2rem, 4vw, 4rem);
   color: #000000ff;
   text-align: center;
-  margin-top: 2vh;
-  margin-left: 10%;
+  margin: 1rem 0 1rem 10%;
 }
 
 .hero-image {
@@ -74,19 +81,25 @@ p {
   margin-right: 5%;
 }
 
+nav {
+  display: flex;
+  position: relative;
+  height: 100%;
+}
+
 .login-button {
-  display: block;
-  align-self: end;
+  display: flex;
+  position: relative;
+  align-self: center;
   align-items: center;
   justify-content: center;
-  padding: 15px 30px;
+  padding: 8px 20px;
   font-size: 1.2rem;
   color: #fff;
   background-color: #4caf50;
   border: none;
   border-radius: 10px;
   width: 150px;
-  height: 50px;
   cursor: pointer;
   margin-right: 20px;
 }
@@ -96,7 +109,6 @@ p {
   position: relative;
   align-items: center;
   justify-content: center;
-  padding: 15px 30px;
   font-size: 1.2rem;
   color: #fff;
   background-color: #4caf50;
@@ -119,11 +131,25 @@ p {
     height: 100dvh;
   }
 
+  .login-button {
+    padding: 8px 20px;
+    font-size: 1.2rem;
+    max-width: 80%;
+    max-height: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    margin: 2rem 0 1rem 0;
+  }
+
   .image-container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: auto;
+    max-height: 80%;
     align-items: center;
   }
 
@@ -139,13 +165,16 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: auto;
     margin-top: 20px;
+  }
+
+  h2 {
+    text-align: center;
   }
 
   p {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1rem;
     margin-right: 0;
   }
 
@@ -153,5 +182,7 @@ p {
     position: static;
     margin-top: 20px;
     margin-bottom: 20px;
+    width: 40%;
+    height: 50px;
   }
 }
